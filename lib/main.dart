@@ -11,7 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Expense Planner',
+      title: 'Personal Expenses',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.purpleAccent,
+        fontFamily: 'Quicksand',
+        appBarTheme: AppBarTheme(
+            textTheme: TextTheme(
+                headline6: TextStyle(
+          fontFamily: 'OpenSans',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ))),
+      ),
       home: MyHomePage(),
     );
   }
@@ -64,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expense Planner'),
+        title: Text('Personal Expenses'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
@@ -80,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               // width: double.infinity,
               child: Card(
-                color: Colors.blue,
+                color: Theme.of(context).primaryColorLight,
                 child: Text('CHART'),
                 elevation: 5,
               ),
