@@ -16,6 +16,9 @@ class TransactionList extends StatelessWidget {
       child: transactions.isEmpty
           ? Column(
               children: <Widget>[
+                SizedBox(
+                  height: 20,
+                ),
                 Text(
                   'No Transactions added yet!',
                   style: Theme.of(context).textTheme.headline6,
@@ -44,9 +47,10 @@ class TransactionList extends StatelessWidget {
                     leading: CircleAvatar(
                       radius: 30,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: EdgeInsets.all(7),
                         child: FittedBox(
-                          child: Text('\$${transactions[index].amount}'),
+                          child: Text(
+                              '\$ ${transactions[index].amount.toStringAsFixed(0)}'),
                         ),
                       ),
                     ),
