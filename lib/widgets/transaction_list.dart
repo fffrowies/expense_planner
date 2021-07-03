@@ -36,7 +36,7 @@ class TransactionList extends StatelessWidget {
               ],
             )
           : ListView.builder(
-              itemBuilder: (ctx, index) {
+              itemBuilder: (ctx, i) {
                 return Card(
                   elevation: 5,
                   margin: EdgeInsets.symmetric(
@@ -50,16 +50,17 @@ class TransactionList extends StatelessWidget {
                         padding: EdgeInsets.all(7),
                         child: FittedBox(
                           child: Text(
-                              '\$ ${transactions[index].amount.toStringAsFixed(0)}'),
+                            '\$ ${transactions[i].amount.toStringAsFixed(0)}',
+                          ),
                         ),
                       ),
                     ),
                     title: Text(
-                      transactions[index].title,
+                      transactions[i].title,
                       style: Theme.of(context).textTheme.headline6,
                     ),
                     subtitle: Text(
-                      DateFormat.yMMMd().format(transactions[index].date),
+                      DateFormat.yMMMd().format(transactions[i].date),
                     ),
                   ),
                 );
