@@ -73,7 +73,7 @@ class _NewTransactionState extends State<NewTransaction> {
               onSubmitted: (_) => _submitData(),
             ),
             Container(
-              height: 50,
+              height: 70,
               child: Row(
                 children: <Widget>[
                   Expanded(
@@ -83,12 +83,9 @@ class _NewTransactionState extends State<NewTransaction> {
                           : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}',
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: TextButton(
-                      onPressed: _presentDatePicker,
-                      child: Text('Choose Date'),
-                    ),
+                  TextButton(
+                    onPressed: _presentDatePicker,
+                    child: Text('Choose Date'),
                   ),
                 ],
               ),
