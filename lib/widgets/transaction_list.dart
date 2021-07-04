@@ -17,17 +17,17 @@ class TransactionList extends StatelessWidget {
             return Column(
               children: <Widget>[
                 SizedBox(
-                  height: 20,
+                  height: constrains.maxHeight * 0.05,
                 ),
                 Text(
                   'No Transactions added yet!',
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: constrains.maxHeight * 0.05,
                 ),
                 Container(
-                  height: constrains.maxHeight * 0.6,
+                  height: constrains.maxHeight * 0.55,
                   child: Image.asset(
                     'assets/images/waiting.png',
                     fit: BoxFit.cover,
